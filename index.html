@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ur ccat </title>
+
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+           
+        }
+        main{
+            height: 100vh;
+            width: 100%;
+            display:flex;
+            justify-content: center;
+            align-items:center ;
+
+        }
+        section{
+            height: 400px;
+            width: 350px;
+            background-color:#141E46;
+            border-radius: 1rem;
+            padding:2rem;
+        }
+
+        h1, h6{
+            color:white;
+            text-align: center;
+        }
+        h6{
+            color:white;
+            text-align:right;
+        }
+
+        .forms{
+            margin-top: 15%;
+            height: auto;
+            width: 100%;
+            padding: 2% 0 0 0;
+        }
+
+        .form-input{
+            width: 100%;
+            border-radius: 2rem;
+            padding: 4%;
+            margin-top: 2%;
+            
+        }
+        textarea{
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>CCAT EMAIL</h1>
+           
+            <div class = "forms">
+                <form id = "contact_form" >
+                    <input type="text" id ="email" class = "form-input" required placeholder="email">
+                    <textarea id="message"  rows="6"   class = "form-input" placeholder="message"> </textarea>
+                    <input type="submit" id="btn" value="send" class = "form-input">
+                </form>
+            </div>
+            <h6>meow meow</h6>
+        </section>
+
+   </main>
+   
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+        (function(){ emailjs.init("_86D_bxWnedE3rhYF");})();
+    </script>
+
+    <script>
+       const form = document.getElementById("contact_form");
+             form.addEventListener("submit", sendMsg);
+
+        function sendMsg(e) {
+             e.preventDefault();
+             const information = {
+                 email: document.getElementById("email").value,
+                 msg: document.getElementById("message").value,
+             };
+
+             const serviceID = "service_epfukwt",
+                   templateID = "template_yxbj0rl";
+
+             emailjs.send(serviceID, templateID, information)
+            .then(
+                res =>{
+                    document.getElementById("email").value = "";
+                    document.getElementById("message").value = "";
+                    console.log(res);
+                    alert("successfully sent!");
+                }
+            ) .catch((err) => console.log(err));
+        }
+          
+
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
