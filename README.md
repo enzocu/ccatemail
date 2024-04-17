@@ -4,5 +4,6 @@ This system utilizes HTML, CSS, and JavaScript to create a web-based interface f
 
 Link: https://enzocu.github.io/ccatemail/
 
-![Uploading image.png…]()
+![image](https://github.com/enzocu/ccatemail/assets/142987675/b9ad744f-a648-4ae5-8d35-410d779019e8)
+
 
