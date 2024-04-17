@@ -3,5 +3,6 @@ This system allows users to send emails anonymously through a web interface. Use
 This system utilizes HTML, CSS, and JavaScript to create a web-based interface for sending anonymous emails. The HTML structure defines the layout and form elements, while CSS styles enhance the visual appearance of the webpage. JavaScript is used to handle form submission and interact with the EmailJS library, which facilitates the sending of emails using a specified email service.
 
 Link: https://enzocu.github.io/ccatemail/
+
 ![Uploading image.png…]()
 
