@@ -22,19 +22,19 @@
 
         }
         section{
-            height: 400px;
-            width: 350px;
-            background-color:#141E46;
-            border-radius: 1rem;
+            
+          
+            background-color:#ffffff;
+            border-radius: 10px;
             padding:2rem;
         }
 
         h1, h6{
-            color:white;
+            color: black;
             text-align: center;
         }
         h6{
-            color:white;
+           color: black;
             text-align:right;
         }
 
@@ -47,13 +47,25 @@
 
         .form-input{
             width: 100%;
-            border-radius: 2rem;
+            border-radius: 5px;
             padding: 4%;
             margin-top: 2%;
+            border: 1px solid black ;
             
         }
         textarea{
             resize: none;
+        }
+        
+        button{
+            background-color: black;
+            color: #ffffff;
+            transition: 0.3s;
+        }
+        
+        button:hover{
+             background-color: grey;
+             border: 1px solid grey;
         }
     </style>
 </head>
@@ -64,9 +76,9 @@
            
             <div class = "forms">
                 <form id = "contact_form" >
-                    <input type="text" id ="email" class = "form-input" required placeholder="email">
-                    <textarea id="message"  rows="6"   class = "form-input" placeholder="message"> </textarea>
-                    <input type="submit" id="btn" value="send" class = "form-input">
+                    <input type="email" id ="email" class = "form-input" required placeholder="email">
+                    <textarea id="message"  rows="6"  class = "form-input" placeholder="message" required=""> </textarea>
+                    <button type="submit" id="btn" class = "form-input">send</button>
                 </form>
             </div>
             <h6>meow meow</h6>
@@ -106,11 +118,7 @@
                 }
             ) .catch((err) => console.log(err));
         }
-          
-
     </script>
-
-
 </body>
 </html>
 
